@@ -514,4 +514,7 @@ html {
     .project-img {
         width: 50rem;
     }
+    .nav-link {
+        margin: 0 auto;
+    }
 }
