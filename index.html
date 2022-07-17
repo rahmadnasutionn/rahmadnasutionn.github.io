@@ -163,11 +163,11 @@
             <h1 class="section-heading section-4-heading">
                 Contact Me
             </h1>
-            <form action="" class="contact-form center">
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <textarea placeholder="Message">
-            </textarea>
+            <form action="" class="contact-form center" name="contact-form">
+                <input type="text" placeholder="Name" name="name" required>
+                <input type="email" placeholder="Email" name="email" required>
+                <textarea placeholder="Message" name="message" required>
+                </textarea>
                 <button type="submit" value="submit" class="contact-form-btn">Submit</button>
             </form>
         </section>
@@ -190,6 +190,26 @@
         </footer>
     </div>
     <script src="js/main.js"></script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyJeWSehf-8YyXfMe-07Pnd9RlCaWdeDfzqr94QowpRVagyU713glYI2tEf7GvRlss-ow/exec'
+        const form = document.forms['contact-form'];
+        const btnSubmit = document.querySelector('.contact-form-btn');
+
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(response => {
+                    console.log('Success!', response)
+                    alert('Pesanmu sudah terkirim ! Terima Kasih');
+                    form.reset();
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
 </body>
 
 </html>

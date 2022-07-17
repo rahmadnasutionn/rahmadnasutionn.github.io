@@ -503,3 +503,15 @@ html {
         font-size: 1.6rem;
     }
 }
+
+@media screen and (max-width: 362px) {
+    .section-heading {
+        font-size: 4rem;
+    }
+    .progress-bar {
+        width: 45rem;
+    }
+    .project-img {
+        width: 50rem;
+    }
+}
