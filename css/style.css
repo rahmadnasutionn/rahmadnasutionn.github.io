@@ -14,6 +14,11 @@ html {
     scroll-behavior: smooth;
 }
 
+.container {
+    width: 100%;
+    overflow: hidden;
+}
+
 .center {
     display: flex;
     justify-content: center;
@@ -49,7 +54,7 @@ html {
     color: #333;
     text-transform: uppercase;
     letter-spacing: 0.5rem;
-    margin-bottom: 15rem;
+    margin-bottom: 10rem;
     border-bottom: .3rem solid #333;
     text-shadow: .2rem .2rem 0.5rem #555;
 }
@@ -57,9 +62,7 @@ html {
 .section-1 {
     width: 100%;
     height: 100vh;
-    background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .3)), url(../images/project/bg.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
+    background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .3)), url(../images/project/bg.jpg) center no-repeat;
     background-size: cover;
     flex-direction: column;
 }
@@ -239,12 +242,6 @@ html {
     box-shadow: .2rem .2rem .5rem #555;
 }
 
-
-/* End Section 2 */
-
-
-/* Section 3 */
-
 .section-3 {
     width: 100%;
     height: 100%;
@@ -410,7 +407,17 @@ html {
 }
 
 @media screen and (max-width: 1200px) {
-    .servies {
+    .section-1 {
+        overflow: hidden;
+        height: auto;
+        width: 100%;
+    }
+    .section-1-heading,
+    .section-1-btn {
+        font-size: 3rem;
+        margin: 2rem 0;
+    }
+    .services {
         height: auto;
         flex-wrap: wrap;
     }
@@ -418,11 +425,17 @@ html {
         margin: 3rem 2rem
     }
     .section-4 {
-        height: 80vh;
+        height: 30%;
+    }
+    .section-4-heading {
+        margin-bottom: 4rem;
+    }
+    .contact-form {
+        margin-bottom: 10rem;
     }
 }
 
-@media screnn and (max-width: 800px) {
+@media screen and (max-width: 800px) {
     .section-1-heading {
         font-size: 4rem;
     }
@@ -431,7 +444,7 @@ html {
     }
 }
 
-@media screnn and (max-width: 600px) {
+@media screen and (max-width: 600px) {
     .section-1-heading {
         font-size: 3rem;
     }
@@ -456,16 +469,20 @@ html {
     }
     .copy {
         width: 70%;
+        font-size: 1.6rem;
+    }
+    .social-media {
+        margin-bottom: 2rem;
     }
 }
 
-@media screnn and (max-width: 500px) {
+@media screen and (max-width: 500px) {
     html {
         font-size: 55%;
     }
 }
 
-@media screnn and (max-width: 450px) {
+@media screen and (max-width: 450px) {
     html {
         font-size: 45%;
     }
@@ -473,12 +490,16 @@ html {
         font-size: 2.5rem;
     }
     .nav-link {
-        margin: 0 1.5rem;
+        margin: 0 2rem;
+        font-size: 1.8rem;
     }
     .section-2-heading {
         text-align: center;
     }
     .progress-bar {
-        width: 40rem;
+        width: 50rem;
+    }
+    .copy {
+        font-size: 1.6rem;
     }
 }
